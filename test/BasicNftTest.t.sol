@@ -21,10 +21,7 @@ contract BasicNftTest is Test {
     function testNameIsCorrect() public {
         string memory expectedName = "Aura Collectibles";
         string memory actualName = basicNft.name();
-        assert(
-            keccak256(abi.encodePacked(expectedName)) ==
-                keccak256(abi.encodePacked(actualName))
-        );
+        assert(keccak256(abi.encodePacked(expectedName)) == keccak256(abi.encodePacked(actualName)));
     }
 
     function testCanMintAndHaveBalance() public {
