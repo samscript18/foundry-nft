@@ -52,9 +52,6 @@ contract MoodNftIntegrationTest is Test {
             )
         );
 
-        assertEq(
-            keccak256(abi.encodePacked(moodNft.tokenURI(0))),
-            keccak256(abi.encodePacked(expectedTokenURI))
-        );
+        assertEq(keccak256(abi.encodePacked(moodNft.tokenURI(0))), keccak256(abi.encodePacked(expectedTokenURI)));
     }
 }
